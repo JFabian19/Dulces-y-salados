@@ -1,6 +1,6 @@
 import { useCart } from '../context/CartContext';
 
-const WHATSAPP_NUMBER = '51941210594';
+const WHATSAPP_NUMBER = '51903143807';
 
 function parsePrice(priceStr) {
   return parseFloat(priceStr.replace('S/', '').trim());

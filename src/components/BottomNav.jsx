@@ -23,7 +23,7 @@ export default function BottomNav({ onCategoryClick }) {
       </button>
       <a
         className="flex flex-col items-center justify-center text-white/50 px-4 py-2 hover:text-primary transition-all"
-        href="https://wa.me/51941210594"
+        href="https://wa.me/51903143807"
         target="_blank"
         rel="noopener noreferrer"
       >

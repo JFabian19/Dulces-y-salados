@@ -32,7 +32,7 @@ export default function Sidebar() {
           </div>
 
           <a
-            href="https://wa.me/51941210594"
+            href="https://wa.me/51903143807"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full mt-8 bg-primary text-on-primary py-4 rounded-full font-headline font-black italic uppercase tracking-widest active:scale-95 transition-transform shadow-lg shadow-primary/20 animate-pulse-glow"
