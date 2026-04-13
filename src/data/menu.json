@@ -1,0 +1,112 @@
+{
+  "restaurante": "Dulces & Salados",
+  "menu": [
+    {
+      "categoria": "JUGOS CLASICOS",
+      "items": [
+        {"cod": 89, "nombre": "Naranja", "precio": "S/ 7.00"},
+        {"cod": 90, "nombre": "Papaya", "precio": "S/ 9.00"},
+        {"cod": 91, "nombre": "Piña", "precio": "S/ 9.00"},
+        {"cod": 92, "nombre": "Mango", "precio": "S/ 9.00"},
+        {"cod": 93, "nombre": "Fresa", "precio": "S/ 9.00"}
+      ]
+    },
+    {
+      "categoria": "JUGOS ESPECIALES",
+      "items": [
+        {"cod": 94, "nombre": "Naranja y Papaya", "precio": "S/ 10.00"},
+        {"cod": 95, "nombre": "Piña y Naranja", "precio": "S/ 10.00"},
+        {"cod": 96, "nombre": "Papaya y Piña", "precio": "S/ 10.00"},
+        {"cod": 97, "nombre": "Maracuyá y Piña", "precio": "S/ 10.00"},
+        {"cod": 98, "nombre": "Maracuyá y Mango", "precio": "S/ 10.00"},
+        {"cod": 99, "nombre": "Maracuyá y Fresa", "precio": "S/ 10.00"}
+      ]
+    },
+    {
+      "categoria": "BATIDOS",
+      "items": [
+        {"cod": 100, "nombre": "Platano con Leche", "precio": "S/ 9.00"},
+        {"cod": 101, "nombre": "Papaya con Leche", "precio": "S/ 11.00"},
+        {"cod": 102, "nombre": "Mango con Leche", "precio": "S/ 11.00"},
+        {"cod": 103, "nombre": "Fresa con Leche", "precio": "S/ 12.00"},
+        {"cod": 104, "nombre": "Lúcuma con Leche", "precio": "S/ 13.00"},
+        {"cod": 105, "nombre": "Mango, Fresa y Leche", "precio": "S/ 13.00"},
+        {"cod": 106, "nombre": "Lúcuma, Fresa y Leche", "precio": "S/ 13.00"}
+      ]
+    },
+    {
+      "categoria": "MILKSHAKE",
+      "items": [
+        {"cod": 107, "nombre": "Fresa", "precio": "S/ 15.00"},
+        {"cod": 108, "nombre": "Lúcuma", "precio": "S/ 15.00"},
+        {"cod": 109, "nombre": "Chocolate", "precio": "S/ 15.00"},
+        {"cod": 110, "nombre": "Oreo", "precio": "S/ 15.00"},
+        {"cod": 111, "nombre": "Frappuccino Cafe", "precio": "S/ 14.00"},
+        {"cod": 112, "nombre": "Frappuccino Moka", "precio": "S/ 14.00"}
+      ]
+    },
+    {
+      "categoria": "CREMOLADAS",
+      "items": [
+        {"cod": 113, "nombre": "Piña", "precio": "S/ 5.00"},
+        {"cod": 114, "nombre": "Coco", "precio": "S/ 5.00"},
+        {"cod": 115, "nombre": "Fresa", "precio": "S/ 5.00"},
+        {"cod": 116, "nombre": "Mango", "precio": "S/ 5.00"},
+        {"cod": 117, "nombre": "Lúcuma", "precio": "S/ 5.00"},
+        {"cod": 118, "nombre": "Maracuyá", "precio": "S/ 5.00"}
+      ]
+    },
+    {
+      "categoria": "BEBIDAS FRIAS",
+      "items": [
+        {"cod": 134, "nombre": "Limonada 1Lt", "precio": "S/ 13.00"},
+        {"cod": 135, "nombre": "Maracuya 1Lt", "precio": "S/ 13.00"},
+        {"cod": 136, "nombre": "Chicha Morada 1Lt", "precio": "S/ 14.00"},
+        {"cod": 137, "nombre": "Frozen Fresa", "precio": "S/ 19.00"},
+        {"cod": 138, "nombre": "Frozen Maracuya", "precio": "S/ 19.00"},
+        {"cod": 139, "nombre": "Frozen Limon", "precio": "S/ 19.00"},
+        {"cod": 140, "nombre": "Agua Cielo", "precio": "S/ 2.50"},
+        {"cod": 141, "nombre": "Agua San Luis", "precio": "S/ 3.00"},
+        {"cod": 142, "nombre": "Coca Cola Personal", "precio": "S/ 3.00"},
+        {"cod": 143, "nombre": "Inca Cola Gordita", "precio": "S/ 5.00"},
+        {"cod": 144, "nombre": "Inca Cola 1 Lt", "precio": "S/ 7.00"},
+        {"cod": 145, "nombre": "Coca Cola 1 Lt", "precio": "S/ 7.00"},
+        {"cod": 146, "nombre": "Inca Cola 1.5 Lt", "precio": "S/ 10.00"},
+        {"cod": 147, "nombre": "Coca Cola 1.5 Lt", "precio": "S/ 10.00"},
+        {"cod": 148, "nombre": "Cusqueña P. 310 ml", "precio": "S/ 7.00"},
+        {"cod": 149, "nombre": "Pilsen Callao 630 ml", "precio": "S/ 9.00"},
+        {"cod": 150, "nombre": "Sangría 1Lt", "precio": "S/ 16.00"}
+      ]
+    },
+    {
+      "categoria": "POSTRES",
+      "items": [
+        {"cod": 119, "nombre": "Budin", "precio": "S/ 4.00"},
+        {"cod": 120, "nombre": "Gelatina", "precio": "S/ 5.00"},
+        {"cod": 121, "nombre": "Keke de Higo", "precio": "S/ 5.00"},
+        {"cod": 122, "nombre": "Keke de Vainilla", "precio": "S/ 5.00"},
+        {"cod": 123, "nombre": "Arroz con Leche", "precio": "S/ 6.00"},
+        {"cod": 124, "nombre": "Mazamorra Morada", "precio": "S/ 6.00"},
+        {"cod": 125, "nombre": "Pie de Manzana", "precio": "S/ 6.00"},
+        {"cod": 126, "nombre": "Leche Asada", "precio": "S/ 6.00"},
+        {"cod": 127, "nombre": "Gelatina con Flan", "precio": "S/ 6.00"},
+        {"cod": 128, "nombre": "Torta Helada", "precio": "S/ 7.00"},
+        {"cod": 129, "nombre": "Crema Volteada", "precio": "S/ 7.00"},
+        {"cod": 130, "nombre": "Torta Mosaico", "precio": "S/ 7.00"},
+        {"cod": 131, "nombre": "Mousse de Maracuya", "precio": "S/ 8.00"},
+        {"cod": 132, "nombre": "Mousse de Chocolate", "precio": "S/ 8.00"},
+        {"cod": 133, "nombre": "Torta de Chocolate", "precio": "S/ 8.00"}
+      ]
+    },
+    {
+      "categoria": "BEBIDAS CALIENTES",
+      "items": [
+        {"cod": 151, "nombre": "Infusiones", "precio": "S/ 2.00"},
+        {"cod": 152, "nombre": "Café Pasado", "precio": "S/ 6.00"},
+        {"cod": 153, "nombre": "Café Pasado C/Pisco", "precio": "S/ 7.00"},
+        {"cod": 154, "nombre": "Café con Leche", "precio": "S/ 7.00"},
+        {"cod": 155, "nombre": "Chocolate Caliente", "precio": "S/ 8.00"}
+      ]
+    }
+  ]
+}

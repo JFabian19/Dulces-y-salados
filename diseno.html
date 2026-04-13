@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&amp;family=Plus+Jakarta+Sans:ital,wght@0,700;0,800;1,700;1,800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffd709",
+                        "surface-container-high": "#20201f",
+                        "on-error": "#490006",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-highest": "#262626",
+                        "primary": "#ff8f6f",
+                        "outline": "#767575",
+                        "surface-bright": "#2c2c2c",
+                        "surface-tint": "#ff8f6f",
+                        "tertiary": "#eeacff",
+                        "on-tertiary-container": "#570e6f",
+                        "surface-container-low": "#131313",
+                        "on-primary-fixed-variant": "#581300",
+                        "on-secondary": "#5b4b00",
+                        "on-surface-variant": "#adaaaa",
+                        "surface": "#0e0e0e",
+                        "secondary": "#ffd709",
+                        "on-secondary-fixed-variant": "#665500",
+                        "on-tertiary-fixed-variant": "#611b79",
+                        "tertiary-fixed-dim": "#d88cee",
+                        "secondary-fixed-dim": "#efc900",
+                        "on-primary": "#5c1400",
+                        "error-dim": "#d7383b",
+                        "surface-container": "#1a1a1a",
+                        "surface-dim": "#0e0e0e",
+                        "secondary-dim": "#efc900",
+                        "on-background": "#ffffff",
+                        "on-primary-container": "#470e00",
+                        "on-secondary-fixed": "#453900",
+                        "inverse-surface": "#fcf9f8",
+                        "error-container": "#9f0519",
+                        "surface-variant": "#262626",
+                        "inverse-on-surface": "#565555",
+                        "primary-fixed": "#ff7851",
+                        "on-primary-fixed": "#000000",
+                        "secondary-container": "#705d00",
+                        "on-error-container": "#ffa8a3",
+                        "error": "#ff716c",
+                        "primary-fixed-dim": "#ff5d2b",
+                        "outline-variant": "#484847",
+                        "on-tertiary": "#621c7a",
+                        "tertiary-fixed": "#e699fd",
+                        "on-surface": "#ffffff",
+                        "background": "#0e0e0e",
+                        "inverse-primary": "#b12f00",
+                        "on-secondary-container": "#fff7e6",
+                        "primary-container": "#ff7851",
+                        "on-tertiary-fixed": "#360049",
+                        "tertiary-dim": "#d88cee",
+                        "primary-dim": "#ff734a",
+                        "tertiary-container": "#e699fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .stucco-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAA0Kqwl9If0GTsIGO4E9k_rj2WwUL8IESOARvS-g6eyBRRO4DRYWc6XsP0sGiKVCxGysyUhdRbMl5uWuw5pA5LtfcqJyDoOtEV2N4Fd82c8_YRWsa0Gwwjg84QrjFOTBV5c31ujekb72msQe6OP6uuxCRxSu8ChbecWlpzGOy3xcViu6-1rwx1VUanuwRLFkZ8hn7gqboO2Gs8DbsDgmiC8hSw0K7-aYGSkZYJsWvNTpEH1Exsd-WRlUY5ssdTeSn496PxZG_dwcpy);
+            opacity: 0.03
+        }
+
+        .torn-edge {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 88%, 90% 84%, 85% 91%, 80% 86%, 75% 93%, 70% 87%, 65% 94%, 60% 88%, 55% 95%, 50% 89%, 45% 96%, 40% 90%, 35% 97%, 30% 91%, 25% 98%, 20% 92%, 15% 99%, 10% 93%, 5% 100%, 0 94%)
+        }
+
+        .dotted-leader {
+            border-bottom: 2px dotted #484847;
+            flex-grow: 1;
+            margin: 0 0.5rem 0.2rem 0.5rem
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+
+        /* Custom social icon sizing */
+        .social-icon {
+            font-size: 1.25rem;
+            opacity: 0.8;
+            transition: all 0.2s;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body italic overflow-x-hidden selection:bg-primary selection:text-on-primary">
+    <div class="fixed inset-0 stucco-overlay pointer-events-none z-0"></div>
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex flex-col items-center px-6 py-4 max-w-full bg-[#0e0e0e]/95 backdrop-blur-lg rounded-b-3xl border-b border-white/5">
+        <div class="flex justify-between items-center w-full mb-2">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[#ff8f6f]"
+                    style="font-variation-settings: 'FILL' 0;">menu</span>
+                <h1
+                    class="text-3xl font-black italic text-[#ff8f6f] drop-shadow-[0_4px_4px_rgba(255,143,111,0.4)] font-headline uppercase tracking-tighter scale-105 origin-left">
+                    Dulces &amp; Salados</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-3 text-[#ff8f6f]">
+                    <a class="social-icon" href="#">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="#">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="#">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-secondary-container px-6 py-1 rounded-full w-fit">
+            <span class="text-[#ffd709] font-black italic text-xs tracking-wider">Delivery: #FFD709</span>
+        </div>
+    </header>
+    <main class="pt-32 pb-32 px-6 max-w-7xl mx-auto relative z-10">
+        <!-- Hero Section -->
+        <section class="mb-12 relative">
+            <div
+                class="bg-primary primary-container torn-edge py-12 px-8 flex flex-col items-center justify-center text-center shadow-2xl">
+                <h2
+                    class="font-headline font-black italic text-5xl md:text-7xl text-on-primary-container uppercase tracking-tighter leading-none mb-4">
+                    DULCES TENTACIONES</h2>
+                <p class="text-on-primary-container/80 text-xl font-bold italic max-w-2xl">Artesanía en cada bocado. El
+                    balance perfecto entre la tradición y la vanguardia repostera.</p>
+            </div>
+            <div class="absolute -right-4 -bottom-8 w-48 h-48 z-20 hidden md:block">
+                <img alt="Cake silhouette"
+                    class="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChhWt-bKJw_aYKCyv_xOuUcwIqThm15zWB7QgVwTqzdUs2dBB9avRfz5GBaa_dNPeLw9cP4jpuAf21PXrMpUw_WWUs3vUdV0eh1tjRE5yhMT-sVr36eqJaetFz8cZWm4O5pa20AufSSEcQpgbf2FKSwYvf-h0tgUBkV-7F7PkLq3fVT25nzKwaYh0rLeCJFz6cCWJl4a1xPuApfRfHYYEM8tCQlqPWDr8tL2ZtxM93DO6ykaiWP9Ec45nAVit80cxbEkxi3rdqRMRL" />
+            </div>
+        </section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-16">
+                <!-- Category 1: Signature Cakes -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-l-4 border-secondary pl-4">
+                        <h3 class="font-headline font-black italic text-3xl text-secondary uppercase">Signature Cakes
+                        </h3>
+                    </div>
+                    <!-- Category Image -->
+                    <div class="w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-xl border border-white/5">
+                        <img alt="Signature Cakes"
+                            class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChhWt-bKJw_aYKCyv_xOuUcwIqThm15zWB7QgVwTqzdUs2dBB9avRfz5GBaa_dNPeLw9cP4jpuAf21PXrMpUw_WWUs3vUdV0eh1tjRE5yhMT-sVr36eqJaetFz8cZWm4O5pa20AufSSEcQpgbf2FKSwYvf-h0tgUBkV-7F7PkLq3fVT25nzKwaYh0rLeCJFz6cCWJl4a1xPuApfRfHYYEM8tCQlqPWDr8tL2ZtxM93DO6ykaiWP9Ec45nAVit80cxbEkxi3rdqRMRL" />
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-primary transition-colors">TORTA
+                                    DE CHOCOLATE NOIR</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$12.50</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Bizcocho húmedo de cacao 70% con ganache
+                                de chocolate belga y frutos rojos.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-primary transition-colors">RED
+                                    VELVET SUPREME</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$10.90</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Clásica masa aterciopelada con frosting
+                                cremoso de queso mascarpone.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-primary transition-colors">CARROT
+                                    CAKE ARTISAN</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$9.50</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Zanahoria orgánica, nueces tostadas y
+                                especias de la casa con crema cítrica.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-primary transition-colors">CHEESECAKE
+                                    NEW YORK</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$11.20</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Base crujiente de galleta con crema
+                                horneada y coulis de frambuesa fresca.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2: Individual Desserts -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-l-4 border-primary pl-4">
+                        <h3 class="font-headline font-black italic text-3xl text-primary uppercase">Individual Desserts
+                        </h3>
+                    </div>
+                    <!-- Category Image -->
+                    <div class="w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-xl border border-white/5">
+                        <img alt="Individual Desserts"
+                            class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS7h-lwJrHUB9661R0gFGavTnyDgbFVEI0Ozs88razz1u6TVlPKw3rGXfhtCVaO6xARxXiEW2S1j84VpBQ-05qf2ae9l6z0GhfE1iPR5wzhSvzGEuGtirSSutif_nFKg0ukwiL5JSvnf8gX-RLpX1NQLjIwupZ8GJmTr1-a9jXgqg4yImQMn1Rb4mmOE3HiIn5OVzwg_jnpJsL8DUUc2msusyyZLOAHcc5010lJvPEe5tcsqZIHO2JVp3hxfwbTCHBuAQ8742Tt0Kh" />
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-secondary transition-colors">BROWNIE
+                                    SEA SALT</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$5.50</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Chocolate fudge con trozos de nuez y un
+                                toque de sal marina de Maras.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-secondary transition-colors">MACARONS
+                                    BOX (X6)</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$14.00</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Selección de sabores: Pistacho, Lavanda,
+                                Limón, y Chocolate amargo.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-secondary transition-colors">TIRAMISÚ
+                                    VENECIANO</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$8.90</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Bizcotelas artesanales embebidas en
+                                espresso y licor de café con mascarpone.</p>
+                        </div>
+                        <div class="flex flex-col group cursor-pointer">
+                            <div class="flex items-end justify-between mb-1">
+                                <span
+                                    class="font-headline font-bold text-xl text-on-surface group-hover:text-secondary transition-colors">CRÈME
+                                    BRÛLÉE</span>
+                                <div class="dotted-leader"></div>
+                                <span class="font-headline font-black text-xl text-secondary">$7.50</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm italic">Crema de vainilla de Madagascar con capa
+                                de azúcar caramelizada al momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="space-y-8">
+                <div class="bg-surface-container-high rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl">
+                    <div class="relative z-10">
+                        <h3 class="font-headline font-black italic text-2xl text-secondary uppercase mb-6">Barista
+                            Selection</h3>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">Espresso Doble</span>
+                                <span class="font-headline font-black text-secondary">$3.50</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">Flat White Oat</span>
+                                <span class="font-headline font-black text-secondary">$4.90</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">Mocha Valrhona</span>
+                                <span class="font-headline font-black text-secondary">$6.20</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">V60 Origin Coffee</span>
+                                <span class="font-headline font-black text-secondary">$5.80</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-8 bg-primary text-on-primary py-4 rounded-full font-headline font-black italic uppercase tracking-widest active:scale-95 transition-transform shadow-lg shadow-primary/20">Order
+                            Now</button>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 opacity-20">
+                        <span class="material-symbols-outlined text-8xl"
+                            style="font-variation-settings: 'FILL' 1;">local_cafe</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container rounded-[2rem] overflow-hidden group shadow-xl">
+                    <div class="relative h-48">
+                        <img alt="Special item"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS7h-lwJrHUB9661R0gFGavTnyDgbFVEI0Ozs88razz1u6TVlPKw3rGXfhtCVaO6xARxXiEW2S1j84VpBQ-05qf2ae9l6z0GhfE1iPR5wzhSvzGEuGtirSSutif_nFKg0ukwiL5JSvnf8gX-RLpX1NQLjIwupZ8GJmTr1-a9jXgqg4yImQMn1Rb4mmOE3HiIn5OVzwg_jnpJsL8DUUc2msusyyZLOAHcc5010lJvPEe5tcsqZIHO2JVp3hxfwbTCHBuAQ8742Tt0Kh" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span
+                                class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-black uppercase mb-2 inline-block">Weekly
+                                Special</span>
+                            <h4 class="font-headline font-black italic text-xl">Golden Glazed Tower</h4>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <section class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+                class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center border border-white/5">
+                <span class="material-symbols-outlined text-primary text-4xl mb-3"
+                    style="font-variation-settings: 'FILL' 1;">eco</span>
+                <p class="font-bold text-sm uppercase">100% Organic</p>
+            </div>
+            <div
+                class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center border border-white/5">
+                <span class="material-symbols-outlined text-primary text-4xl mb-3"
+                    style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                <p class="font-bold text-sm uppercase">Award Winning</p>
+            </div>
+            <div
+                class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center border border-white/5">
+                <span class="material-symbols-outlined text-primary text-4xl mb-3"
+                    style="font-variation-settings: 'FILL' 1;">schedule</span>
+                <p class="font-bold text-sm uppercase">Baked Fresh</p>
+            </div>
+            <div
+                class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center border border-white/5">
+                <span class="material-symbols-outlined text-primary text-4xl mb-3"
+                    style="font-variation-settings: 'FILL' 1;">delivery_dining</span>
+                <p class="font-bold text-sm uppercase">Quick Delivery</p>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Navigation Bar: Updated to 3 options -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-[#0e0e0e]/95 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.5)] md:hidden border-t border-white/5">
+        <a class="flex flex-col items-center justify-center text-white/50 px-4 py-2 hover:text-[#ff8f6f] transition-all"
+            href="#">
+            <span class="material-symbols-outlined mb-1">home</span>
+            <span class="font-['Plus_Jakarta_Sans'] font-bold italic text-[10px] uppercase">Inicio</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-[#ff8f6f] text-[#0e0e0e] rounded-full px-8 py-2 translate-y-[-12px] shadow-[0_4px_20px_rgba(255,143,111,0.5)]"
+            href="#">
+            <span class="material-symbols-outlined mb-1"
+                style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+            <span class="font-['Plus_Jakarta_Sans'] font-bold italic text-[10px] uppercase">Carta</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-white/50 px-4 py-2 hover:text-[#ff8f6f] transition-all"
+            href="#">
+            <span class="material-symbols-outlined mb-1">location_on</span>
+            <span class="font-['Plus_Jakarta_Sans'] font-bold italic text-[10px] uppercase">Ubicación</span>
+        </a>
+    </nav>
+    <div class="fixed right-8 bottom-24 z-40 hidden lg:block">
+        <div
+            class="bg-primary-container p-4 rounded-full shadow-[0_15px_30px_rgba(255,143,111,0.4)] animate-bounce cursor-pointer group">
+            <span
+                class="material-symbols-outlined text-on-primary-container text-3xl block group-hover:scale-125 transition-transform"
+                style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+        </div>
+    </div>
+</body>
+
+</html>
