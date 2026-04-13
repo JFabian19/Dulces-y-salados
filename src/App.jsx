@@ -39,8 +39,6 @@ function AppContent() {
   return (
 
     <>
-      {/* Stucco texture overlay */}
-      <div className="fixed inset-0 stucco-overlay pointer-events-none z-0" />
 
       <Header
         onCategoryClick={handleCategoryClick}
