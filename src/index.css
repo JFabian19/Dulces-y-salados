@@ -14,20 +14,20 @@
   --color-surface-container-highest: #262626;
   --color-surface-container-lowest: #000000;
   --color-surface-variant: #262626;
-  --color-surface-tint: #ff8f6f;
+  --color-surface-tint: #ff6d00;
 
   --color-on-surface: #ffffff;
   --color-on-surface-variant: #adaaaa;
   --color-on-background: #ffffff;
   --color-background: #0e0e0e;
 
-  --color-primary: #ff8f6f;
-  --color-primary-dim: #ff734a;
-  --color-primary-fixed: #ff7851;
-  --color-primary-fixed-dim: #ff5d2b;
-  --color-primary-container: #ff7851;
-  --color-on-primary: #5c1400;
-  --color-on-primary-container: #470e00;
+  --color-primary: #ff6d00;
+  --color-primary-dim: #e65100;
+  --color-primary-fixed: #ff6d00;
+  --color-primary-fixed-dim: #e65100;
+  --color-primary-container: #ff9e40;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #331500;
   --color-on-primary-fixed: #000000;
   --color-on-primary-fixed-variant: #581300;
   --color-inverse-primary: #b12f00;
@@ -37,10 +37,8 @@
   --color-secondary-fixed: #ffd709;
   --color-secondary-fixed-dim: #efc900;
   --color-secondary-container: #705d00;
-  --color-on-secondary: #5b4b00;
+  --color-on-secondary: #000000;
   --color-on-secondary-container: #fff7e6;
-  --color-on-secondary-fixed: #453900;
-  --color-on-secondary-fixed-variant: #665500;
 
   --color-tertiary: #eeacff;
   --color-tertiary-dim: #d88cee;
@@ -48,14 +46,11 @@
   --color-tertiary-fixed-dim: #d88cee;
   --color-tertiary-container: #e699fd;
   --color-on-tertiary: #621c7a;
-  --color-on-tertiary-container: #570e6f;
-  --color-on-tertiary-fixed: #360049;
-  --color-on-tertiary-fixed-variant: #611b79;
 
   --color-error: #ff716c;
   --color-error-dim: #d7383b;
   --color-error-container: #9f0519;
-  --color-on-error: #490006;
+  --color-on-error: #ffffff;
   --color-on-error-container: #ffa8a3;
 
   --color-outline: #767575;
@@ -64,16 +59,19 @@
   --color-inverse-on-surface: #565555;
 
   /* ---- Typography ---- */
-  --font-headline: "Epilogue", sans-serif;
-  --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-label: "Plus Jakarta Sans", sans-serif;
+  --font-logo: "Fredoka", sans-serif;
+  --font-headline: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
 
   /* ---- Border Radius ---- */
   --radius-sm: 0.125rem;
   --radius-md: 0.25rem;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
 }
+
 
 /* ============================================
    BASE STYLES
@@ -84,16 +82,18 @@ html {
 
 body {
   min-height: max(884px, 100dvh);
-  background-color: var(--color-surface);
+  background-color: #0e0e0e;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 109, 0, 0.05) 0%, transparent 80%),
+    url("https://www.transparenttextures.com/patterns/dark-matter.png"); /* Chalkboard/Slate texture */
   color: var(--color-on-surface);
   font-family: var(--font-body);
-  font-style: italic;
   overflow-x: hidden;
 }
 
 ::selection {
   background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  color: #white;
 }
 
 /* ============================================
@@ -103,25 +103,24 @@ body {
 /* Stucco texture overlay */
 .stucco-overlay {
   background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA0Kqwl9If0GTsIGO4E9k_rj2WwUL8IESOARvS-g6eyBRRO4DRYWc6XsP0sGiKVCxGysyUhdRbMl5uWuw5pA5LtfcqJyDoOtEV2N4Fd82c8_YRWsa0Gwwjg84QrjFOTBV5c31ujekb72msQe6OP6uuxCRxSu8ChbecWlpzGOy3xcViu6-1rwx1VUanuwRLFkZ8hn7gqboO2Gs8DbsDgmiC8hSw0K7-aYGSkZYJsWvNTpEH1Exsd-WRlUY5ssdTeSn496PxZG_dwcpy");
-  opacity: 0.03;
+  opacity: 0.1; /* Increased visibility */
 }
 
-/* Torn paper edge effect */
+/* Torn paper edge effect — Primary (Orange) */
 .torn-edge {
   clip-path: polygon(
-    0 0, 100% 0, 100% 85%, 95% 88%, 90% 84%, 85% 91%, 80% 86%,
-    75% 93%, 70% 87%, 65% 94%, 60% 88%, 55% 95%, 50% 89%,
-    45% 96%, 40% 90%, 35% 97%, 30% 91%, 25% 98%, 20% 92%,
-    15% 99%, 10% 93%, 5% 100%, 0 94%
+    0 5%, 5% 0, 10% 5%, 15% 0, 20% 5%, 25% 0, 30% 5%, 35% 0, 40% 5%, 45% 0, 50% 5%, 55% 0, 60% 5%, 65% 0, 70% 5%, 75% 0, 80% 5%, 85% 0, 90% 5%, 95% 0, 100% 5%,
+    100% 95%, 95% 100%, 90% 95%, 85% 100%, 80% 95%, 75% 100%, 70% 95%, 65% 100%, 60% 95%, 55% 100%, 50% 95%, 45% 100%, 40% 95%, 35% 100%, 30% 95%, 25% 100%, 20% 95%, 15% 100%, 10% 95%, 5% 100%, 0 95%
   );
 }
 
 /* Dotted leader between name and price */
 .dotted-leader {
-  border-bottom: 2px dotted var(--color-outline-variant);
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
   flex-grow: 1;
-  margin: 0 0.5rem 0.2rem 0.5rem;
+  margin: 0 0.5rem 0.4rem 0.5rem;
 }
+
 
 /* Social icon hover */
 .social-icon {
@@ -161,10 +160,10 @@ body {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 143, 111, 0.3);
+    box-shadow: 0 0 20px rgba(0, 209, 102, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(255, 143, 111, 0.6);
+    box-shadow: 0 0 40px rgba(0, 209, 102, 0.6);
   }
 }
 
@@ -235,11 +234,14 @@ body {
   animation: cartPop 0.4s ease-out both;
 }
 
-/* Category nav scrollbar */
-.category-nav::-webkit-scrollbar {
-  display: none;
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
-.category-nav {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
 }
+
