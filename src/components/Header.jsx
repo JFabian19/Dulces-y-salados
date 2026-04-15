@@ -15,7 +15,7 @@ const categoryIcons = {
 export default function Header({ onCategoryClick }) {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const marqueeText = "EL MEJOR SABOR DE MIRAFLORES • ";
+  const marqueeText = "EL MEJOR SABOR DEL CALLAO • ";
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex flex-col items-center bg-black/95 backdrop-blur-xl border-b border-white/5">
@@ -43,9 +43,18 @@ export default function Header({ onCategoryClick }) {
             <span className="text-[10px] uppercase font-bold text-white/50">Delivery</span>
             <span className="text-secondary font-black text-sm tracking-widest">903 143 807</span>
           </div>
-          <button className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-white border border-white/10 hover:border-primary/50 transition-colors cursor-pointer">
-            <span className="material-symbols-outlined text-xl">shopping_bag</span>
-          </button>
+          {/* Maps link */}
+          <a
+            href="https://maps.app.goo.gl/VxR5tkFXcR78Xtdb9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-white border border-white/10 hover:border-primary/50 hover:text-primary transition-colors cursor-pointer"
+            aria-label="Ver ubicación en Google Maps"
+            title="Ver en Google Maps"
+          >
+            <span className="material-symbols-outlined text-xl">location_on</span>
+          </a>
+
         </div>
       </div>
 

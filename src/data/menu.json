@@ -2,6 +2,109 @@
   "restaurante": "Dulces & Salados",
   "menu": [
     {
+      "categoria": "SANDWICH'S",
+      "notas": "* Incluido Papas Fritas + Ensalada",
+      "items": [
+        {"cod": 1, "nombre": "CLASICA:", "descripcion": "Pollo Deshilachado", "precio": "S/ 13.00"},
+        {"cod": 2, "nombre": "IMPERIAL:", "descripcion": "Filete de Pollo", "precio": "S/ 14.00"},
+        {"cod": 3, "nombre": "CRUNCH:", "descripcion": "Filete Broaster", "precio": "S/ 15.00"},
+        {"cod": 4, "nombre": "ROYAL:", "descripcion": "Pollo Deshilachado+ Queso + Huevo", "precio": "S/ 15.00"}
+      ]
+    },
+    {
+      "categoria": "HAMBURGUESA'S",
+      "notas": "* Incluido Papas Fritas + Ensalada",
+      "items": [
+        {"cod": 5, "nombre": "CLASICA:", "descripcion": "120gm de Carne de Res", "precio": "S/ 14.00"},
+        {"cod": 6, "nombre": "CHEESE BURGUER:", "descripcion": "120gm de Carne de Res + Queso", "precio": "S/ 16.00"},
+        {"cod": 7, "nombre": "ROYAL:", "descripcion": "120gm de Carne de Res + Huevo + Queso", "precio": "S/ 17.00"},
+        {"cod": 8, "nombre": "A LO POBRE:", "descripcion": "120gm de Carne de Res + Huevo + Platano", "precio": "S/ 18.00"},
+        {"cod": 9, "nombre": "PARRILLERA:", "descripcion": "120gm de Carne de Res + Chorizo Parrillero", "precio": "S/ 18.00"},
+        {"cod": 10, "nombre": "CHEESE BACON:", "descripcion": "120gm de Carne de Res + Tocino + Queso", "precio": "S/ 18.00"}
+      ]
+    },
+    {
+      "categoria": "SALCHIPAPA'S",
+      "items": [
+        {"cod": 11, "nombre": "CLASICA:", "descripcion": "Papas Fritas + Hot Dog Ahumado", "precio": "S/ 14.00"},
+        {"cod": 12, "nombre": "ROYAL:", "descripcion": "Papas Fritas + Hot Dog Ahumado + Queso + Huevo", "precio": "S/ 17.00"},
+        {"cod": 13, "nombre": "CHORIPAPAS:", "descripcion": "Papas Fritas + Chorizo Parrillero", "precio": "S/ 17.00"},
+        {"cod": 14, "nombre": "SALCHIPOLLO:", "descripcion": "Papas Fritas + Pollo Deshilachado + Hot Dog Ahumado", "precio": "S/ 18.00"},
+        {"cod": 15, "nombre": "SALCHIBROASTER:", "descripcion": "Papas Fritas + Hot Dog Ahumado + Pza.de Pollo", "precio": "S/ 19.00"},
+        {"cod": 16, "nombre": "A LO POBRE:", "descripcion": "Papas Fritas + Hot Dog Ahumado + Platano + Huevo", "precio": "S/ 19.00"},
+        {"cod": 17, "nombre": "AMAZONICO:", "descripcion": "Papas Fritas + Hot Dog Ahumado + Salchicha Amazonica + Cecina + Platano", "precio": "S/ 26.00"},
+        {"cod": 18, "nombre": "DE LA CASA:", "descripcion": "Papas Fritas + Hot Dog Ahumado + Chorizo Parrillero + Queso + Huevo + Tocino", "precio": "S/ 26.00"}
+      ]
+    },
+    {
+      "categoria": "BROASTER / MOSTRITO",
+      "notas": "* Incluido Papas Fritas + Ensalada",
+      "items": [
+        {"cod": 19, "nombre": "Alita", "precio": "S/ 14.00"},
+        {"cod": 20, "nombre": "Pierna", "precio": "S/ 14.00"},
+        {"cod": 21, "nombre": "Encuentro", "precio": "S/ 15.00"},
+        {"cod": 22, "nombre": "Pechuga", "precio": "S/ 19.00"},
+        {"cod": 23, "nombre": "1/4 de Broaster (pecho/pierna)", "precio": "S/ 23.00"},
+        {"cod": 24, "nombre": "Mostrito Broaster:", "descripcion": "(Pza de Pollo + Papas Fritas + Chaufa)", "precio": "S/ 19.00"},
+        {"cod": 25, "nombre": "Mostro Broaster:", "descripcion": "(1/4 de Pollo Broaster + Papas Fritas + Chaufa)", "precio": "S/ 27.00"}
+      ]
+    },
+    {
+      "categoria": "ALITAS EN SALSAS",
+      "notas": "* Incluido Papas Fritas",
+      "items": [
+        {"cod": 24, "nombre": "BBQ", "precio": "S/ 23.00"},
+        {"cod": 25, "nombre": "Búfalo", "precio": "S/ 23.00"},
+        {"cod": 26, "nombre": "Crispy", "precio": "S/ 22.00"},
+        {"cod": 27, "nombre": "Teriyaki", "precio": "S/ 22.00"},
+        {"cod": 28, "nombre": "Acevichada", "precio": "S/ 23.00"},
+        {"cod": 29, "nombre": "BBQ Picantes", "precio": "S/ 23.00"},
+        {"cod": 30, "nombre": "Ronda de Alitas", "descripcion": "(12 Pzs de Alitas en 3 Salsas a Elección)", "precio": "S/ 42.00"}
+      ]
+    },
+    {
+      "categoria": "PLATOS A LA CARTA",
+      "items": [
+        {"cod": 31, "nombre": "Lomo Saltado", "precio": "S/ 28.00"},
+        {"cod": 32, "nombre": "Lomo Saltado a lo Pobre", "precio": "S/ 30.00"},
+        {"cod": 33, "nombre": "Pollo Saltado", "precio": "S/ 25.00"},
+        {"cod": 34, "nombre": "Pollo Saltado a lo Pobre", "precio": "S/ 28.00"},
+        {"cod": 35, "nombre": "Tallarin Saltado de Pollo", "precio": "S/ 23.00"},
+        {"cod": 36, "nombre": "Tallarin Saltado de Carne", "precio": "S/ 25.00"},
+        {"cod": 37, "nombre": "Tallarines a la Huancaina con Lomo", "precio": "S/ 27.00"},
+        {"cod": 38, "nombre": "Tallarines al Pesto con Filete de Pollo", "precio": "S/ 27.00"},
+        {"cod": 39, "nombre": "Filete a la Plancha", "precio": "S/ 26.00"},
+        {"cod": 40, "nombre": "Arroz Tapado a la Cubana", "precio": "S/ 23.00"},
+        {"cod": 41, "nombre": "Arroz Chaufa Pollo", "precio": "S/ 22.00"},
+        {"cod": 42, "nombre": "Arroz Chaufa Carne", "precio": "S/ 25.00"},
+        {"cod": 43, "nombre": "Arroz Chaufa Amazónico", "precio": "S/ 26.00"}
+      ]
+    },
+    {
+      "categoria": "SOPAS",
+      "items": [
+        {"cod": 44, "nombre": "Caldo de Gallina S/P", "precio": "S/ 14.00"},
+        {"cod": 45, "nombre": "Caldo de Gallina C/P", "precio": "S/ 18.00"},
+        {"cod": 46, "nombre": "Sopa Criolla", "precio": "S/ 17.00"},
+        {"cod": 47, "nombre": "Sopa a la Minuta", "precio": "S/ 17.00"},
+        {"cod": 48, "nombre": "Dieta de Pollo", "precio": "S/ 16.00"}
+      ]
+    },
+    {
+      "categoria": "ADICIONALES",
+      "items": [
+        {"cod": 49, "nombre": "2 Queso", "precio": "S/ 2.50"},
+        {"cod": 50, "nombre": "1 Huevo", "precio": "S/ 2.50"},
+        {"cod": 51, "nombre": "1 Plátano Frito", "precio": "S/ 3.00"},
+        {"cod": 52, "nombre": "2 Hot dog", "precio": "S/ 4.00"},
+        {"cod": 53, "nombre": "1 Chorizo", "precio": "S/ 4.00"},
+        {"cod": 54, "nombre": "2 Tocino", "precio": "S/ 4.00"},
+        {"cod": null, "nombre": "Ensalada Fresca", "precio": "S/ 3.00"},
+        {"cod": 55, "nombre": "Porcion de Arroz", "precio": "S/ 4.00"},
+        {"cod": 56, "nombre": "Porcion de Papas", "precio": "S/ 7.50"}
+      ]
+    },
+    {
       "categoria": "JUGOS CLASICOS",
       "items": [
         {"cod": 89, "nombre": "Naranja", "precio": "S/ 7.00"},

@@ -28,7 +28,7 @@ export default function Hero() {
             Sabor <span className="text-primary italic">Tradicional</span>
           </h2>
           <p className="text-primary font-bold text-sm sm:text-lg uppercase tracking-widest flex items-center gap-3 italic">
-            Desde 1995 • Los mejores jugos
+            Los mejores sabores
             <span className="w-12 h-0.5 bg-primary/50" />
           </p>
         </div>

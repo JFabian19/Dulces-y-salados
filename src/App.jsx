@@ -44,7 +44,7 @@ function AppContent() {
         onCategoryClick={handleCategoryClick}
       />
 
-      <main className="pt-48 pb-24 px-4 sm:px-6 max-w-7xl mx-auto relative z-10">
+      <main className="pt-48 pb-32 px-4 sm:px-6 max-w-7xl mx-auto relative z-10">
         {activeCategory === null ? (
           /* HOME VIEW */
           <div className="animate-fade-in-up">
